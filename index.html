@@ -14,8 +14,8 @@
 
         <!-- sign in 1 -->
         <form action="" method="POST" class="form" id="form-1">
-            <h3 class="heading">Đăng ký thành viên</h3>
-            <p class="desc">Cùng nhau học lập trình miễn phí tại F8 ❤️</p>
+            <h3 class="heading">Sign up</h3>
+            <p class="desc">Form validate user input for securing webapp</p>
 
             <div class="spacer"></div>
 
@@ -39,20 +39,21 @@
 
             <div class="form-group">
                 <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
-                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu"
+                    type="password" class="form-control">
                 <span class="form-message"></span>
             </div>
 
-            <button class="form-submit">Đăng ký</button>
+            <button class="form-submit">Sign up</button>
         </form>
 
         <!-- sign in 2 -->
         <form action="" method="POST" class="form" id="form-2">
-            <h3 class="heading">Đăng ký thành viên</h3>
-            <p class="desc">Cùng nhau học lập trình miễn phí tại F8 ❤️</p>
+            <h3 class="heading">Sign up</h3>
+            <p class="desc">Form validate user input for securing webapp</p>
 
             <div class="spacer"></div>
-            
+
             <div class="form-group">
                 <label for="avatar" class="form-label">Ảnh đại diện</label>
                 <input id="avatar" name="avatar" type="file" class="form-radio-control">
@@ -103,13 +104,13 @@
                 <span class="form-message"></span>
             </div>
 
-            <button class="form-submit">Đăng ký</button>
+            <button class="form-submit">Sign up</button>
         </form>
 
         <!-- log in -->
         <form action="" method="POST" class="form" id="form-3">
-            <h3 class="heading">Đăng nhập</h3>
-            <p class="desc">Cùng nhau học lập trình miễn phí tại F8 ❤️</p>
+            <h3 class="heading">Sign in</h3>
+            <p class="desc">Form validate user input for securing webapp</p>
 
             <div class="spacer"></div>
 
@@ -125,7 +126,7 @@
                 <span class="form-message"></span>
             </div>
 
-            <button class="form-submit">Đăng nhập</button>
+            <button class="form-submit">Sign in</button>
         </form>
 
     </div>
@@ -146,7 +147,7 @@
                 Validator.isRequired('#password_confirmation'),
                 Validator.isConfirmed('#password_confirmation', '#password', `Nhập lại mật khẩu không khớp!`),
             ],
-            onSubmit: function(data) {
+            onSubmit: function (data) {
                 console.log(data);
             }
         });
@@ -160,7 +161,7 @@
                 Validator.isRequired('input[name="gender"]'),
                 Validator.isRequired('input[name="social"]', `Vui lòng chọn tối thiểu 1 lựa chọn`),
             ],
-            onSubmit: function(data) {
+            onSubmit: function (data) {
                 console.log(data);
             }
         });
@@ -173,7 +174,7 @@
                 Validator.isEmail('#email', `Địa chỉ email không chính xác!`),
                 Validator.isRequired('#password'),
             ],
-            onSubmit: function(data) {
+            onSubmit: function (data) {
                 console.log(data);
             }
         });

@@ -94,7 +94,7 @@ html {
 }
 
 .form-control:hover {
-    border-color: #1dbfaf;
+    border-color: #3cb3ef;
 }
 
 .form-group.invalid .form-control,
