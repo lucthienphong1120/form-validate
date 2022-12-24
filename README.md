@@ -5,7 +5,7 @@ Form validate with js (2 ways), see the example below
 + https://www.ltp110.tk/form-validate/index
 + https://www.ltp110.tk/form-validate/index2
 
-
+More other types, see at [Issues](https://github.com/lucthienphong1120/form-validate/issues)
 
 ## Not All Solutions are Equal
 
