@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <!-- log in -->
+        <form method="POST" class="form" id="sign-in">
+            <h3 class="heading">Sign in</h3>
+            <p class="desc">Log in to enjoy exclusive offers for you!</p>
+            <div class="row" style="width: 400px;">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="username" class="form-label">Username</label>
+                        <input id="username" name="username" type="text" rules="required|min:3|max:10"
+                            placeholder="Nhập tên đăng nhập của bạn" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input id="password" name="password" type="password" rules="required|min:3"
+                            placeholder="Nhập mật khẩu" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="form-submit" name="login-submit">Sign in</button>
+            <p class="desc">Don't have an account? <a href="./index.html">Sign up</a></p>
+        </form>
+
+    </div>
+    
+    <!-- script js -->
+    <script src="./js/validator.js"></script>
+    <script>
+        Validator({
+            form: '#form-1',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#fullname', `Nhập họ tên của bạn!`),
+                Validator.isRequired('#email'),
+                Validator.isEmail('#email', `Địa chỉ email không chính xác!`),
+                Validator.isRequired('#password'),
+                Validator.minLength('#password', 6, `Mật khẩu tối thiểu 6 ký tự!`),
+                Validator.isRequired('#password_confirmation'),
+                Validator.isConfirmed('#password_confirmation', '#password', `Nhập lại mật khẩu không khớp!`),
+            ],
+            onSubmit: function (data) {
+                alert(JSON.stringify(data));
+            }
+        });
+        Validator({
+            form: '#form-2',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#avatar', `Vui lòng chọn ảnh đại diện!`),
+                Validator.isRequired('#province'),
+                Validator.isRequired('input[name="gender"]'),
+                Validator.isRequired('input[name="social"]', `Vui lòng chọn tối thiểu 1 lựa chọn`),
+            ],
+            onSubmit: function (data) {
+                alert(JSON.stringify(data));
+            }
+        });
+        Validator({
+            form: '#form-3',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#email'),
+                Validator.isEmail('#email', `Địa chỉ email không chính xác!`),
+                Validator.isRequired('#password'),
+            ],
+            onSubmit: function (data) {
+                alert(JSON.stringify(data));
+            }
+        });
+    </script>
+</body>
+</html>
