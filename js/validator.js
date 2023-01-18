@@ -34,13 +34,15 @@ function Validator(options) {
     // handle submit event and return data
     if (formElement) {
         formElement.onsubmit = (e) => {
-//             e.preventDefault();
             var isFormValid = true;
             // validate all input elements
             options.rules.forEach(rule => {
                 var inputElement = formElement.querySelector(rule.selector);
                 var isError = validate(inputElement, rule);
-                if (isError) isFormValid = false;
+                if (isError) {
+                    isFormValid = false;
+                    e.preventDefault();
+                }
             });
             if (isFormValid) {
                 // submit form with javascript
@@ -68,7 +70,7 @@ function Validator(options) {
                                 }
                                 break;
                             case 'file':
-                                if(input.files.length) {
+                                if (input.files.length) {
                                     values[input.name] = input.files[0];
                                 }
                                 else {
@@ -122,7 +124,7 @@ Validator.isRequired = (selector, message = `Vui lòng nhập phần này!`) => 
     return {
         selector,
         test(value) {
-            if(typeof value == 'string') value = value.trim();
+            if (typeof value == 'string') value = value.trim();
             return value ? '' : message;
         }
     }

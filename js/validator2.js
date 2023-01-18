@@ -4,7 +4,7 @@ function Validator(formSelector) {
     // function of rules to validate
     var validatorRules = {
         required(value) {
-            if(typeof value == 'string') value = value.trim();
+            if (typeof value == 'string') value = value.trim();
             return value ? '' : `Vui lòng nhập phần này!`;
         },
         email(value) {
@@ -100,13 +100,15 @@ function Validator(formSelector) {
     }
     // handle submit event and return data
     formElement.onsubmit = (e) => {
-//         e.preventDefault();
         var inputs = formElement.querySelectorAll('[name][rules]:not([disabled])');
         var isFormValid = true;
         // callback validate all input elements
         for (var input of inputs) {
             var isError = handleValidate({ target: input });
-            if (isError) isFormValid = false;
+            if (isError) {
+                isFormValid = false;
+                e.preventDefault();
+            }
         }
         if (isFormValid) {
             // submit form with javascript
