@@ -148,7 +148,7 @@
                 Validator.isConfirmed('#password_confirmation', '#password', `Nhập lại mật khẩu không khớp!`),
             ],
             onSubmit: function (data) {
-                console.log(data);
+                alert(JSON.stringify(data));
             }
         });
         Validator({
@@ -162,7 +162,7 @@
                 Validator.isRequired('input[name="social"]', `Vui lòng chọn tối thiểu 1 lựa chọn`),
             ],
             onSubmit: function (data) {
-                console.log(data);
+                alert(JSON.stringify(data));
             }
         });
         Validator({
@@ -175,7 +175,7 @@
                 Validator.isRequired('#password'),
             ],
             onSubmit: function (data) {
-                console.log(data);
+                alert(JSON.stringify(data));
             }
         });
     </script>
