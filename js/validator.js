@@ -34,7 +34,7 @@ function Validator(options) {
     // handle submit event and return data
     if (formElement) {
         formElement.onsubmit = (e) => {
-            e.preventDefault();
+//             e.preventDefault();
             var isFormValid = true;
             // validate all input elements
             options.rules.forEach(rule => {
