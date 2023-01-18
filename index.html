@@ -11,122 +11,110 @@
 
 <body>
     <div class="main">
-
-        <!-- sign in 1 -->
-        <form action="" method="POST" class="form" id="form-1">
+        <!-- sign up -->
+        <form method="POST" class="form" id="sign-up">
             <h3 class="heading">Sign up</h3>
-            <p class="desc">Form validate user input for securing webapp</p>
+            <p class="desc">Register to receive offers from us right now!</p>
+            <div class="row" style="width: 800px;">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="fullname" class="form-label">Fullname</label>
+                        <input id="fullname" name="fullname" type="text" rules="required"
+                            placeholder="Nhập tên của bạn" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
 
-            <div class="spacer"></div>
+                    <div class="form-group">
+                        <label for="username" class="form-label">Username</label>
+                        <input id="username" name="username" type="text" rules="required|min:3|max:10"
+                            placeholder="Chọn tên tài khoản của bạn" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
 
-            <div class="form-group">
-                <label for="fullname" class="form-label">Tên đầy đủ</label>
-                <input id="fullname" name="fullname" type="text" placeholder="Nhập tên của bạn" class="form-control">
-                <span class="form-message"></span>
-            </div>
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input id="password" name="password" type="password" rules="required|min:3"
+                            placeholder="Nhập mật khẩu" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
 
-            <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input id="email" name="email" type="text" placeholder="Nhập email đăng ký" class="form-control">
-                <span class="form-message"></span>
-            </div>
+                    <div class="form-group">
+                        <label for="password_confirmation" class="form-label">Confirm password</label>
+                        <input id="password_confirmation" name="password_confirmation"
+                            rules="required|confirm:#password" placeholder="Nhập lại mật khẩu" type="password"
+                            class="form-control">
+                        <span class="form-message"></span>
+                    </div>
 
-            <div class="form-group">
-                <label for="password" class="form-label">Mật khẩu</label>
-                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
-                <span class="form-message"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
-                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu"
-                    type="password" class="form-control">
-                <span class="form-message"></span>
-            </div>
-
-            <button class="form-submit">Sign up</button>
-        </form>
-
-        <!-- sign in 2 -->
-        <form action="" method="POST" class="form" id="form-2">
-            <h3 class="heading">Sign up</h3>
-            <p class="desc">Form validate user input for securing webapp</p>
-
-            <div class="spacer"></div>
-
-            <div class="form-group">
-                <label for="avatar" class="form-label">Ảnh đại diện</label>
-                <input id="avatar" name="avatar" type="file" class="form-radio-control">
-                <span class="form-message"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="province" class="form-label">Thành phố</label>
-                <select id="province" name="province" class="form-control">
-                    <option value="">-- Chọn thành phố --</option>
-                    <option value="ha noi">Hà Nội</option>
-                    <option value="ho chi minh">Hồ Chí Minh</option>
-                    <option value="thanh hoa">Thanh Hóa</option>
-                    <option value="nghe an">Nghệ An</option>
-                    <option value="dong nai">Đồng Nai</option>
-                    <option value="binh duong">Bình Dương</option>
-                    <option value="hai phong">Hải Phòng</option>
-                    <option value="an giang">An Giang</option>
-                    <option value="hai duong">Hải Dương</option>
-                </select>
-                <span class="form-message"></span>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label">Giới tính</label>
-                <div class="form-radio-control">
-                    <div><input name="gender" type="radio" value="nam" class="form-radio">Nam</div>
-                    <div><input name="gender" type="radio" value="nu" class="form-radio">Nữ</div>
-                    <div><input name="gender" type="radio" value="khac" class="form-radio">Khác</div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input id="phone" name="phone" type="number" rules="required|min:10|max:10"
+                            placeholder="Nhập số điện thoại" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
                 </div>
-                <span class="form-message"></span>
-            </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="avatar" class="form-label">Avatar</label>
+                        <input id="avatar" name="avatar" type="file" rules="required" class="form-radio-control">
+                        <span class="form-message"></span>
+                    </div>
 
-            <div class="form-group">
-                <label class="form-label">Bạn dùng mạng xã hội nào</label>
-                <div class="form-checkbox-control">
-                    <div><input name="social" type="checkbox" value="facebook" class="form-radio">Facebook</div>
-                    <div><input name="social" type="checkbox" value="youtube" class="form-radio">Youtube</div>
-                    <div><input name="social" type="checkbox" value="twitter" class="form-radio">Twitter</div>
-                    <div><input name="social" type="checkbox" value="instagram" class="form-radio">Instagram</div>
-                    <div><input name="social" type="checkbox" value="pinterst" class="form-radio">Pinterst</div>
-                    <div><input name="social" type="checkbox" value="linkedin" class="form-radio">Linkedin</div>
-                    <div><input name="social" type="checkbox" value="reddit" class="form-radio">Reddit</div>
-                    <div><input name="social" type="checkbox" value="tiktok" class="form-radio">TikTok</div>
-                    <div><input name="social" type="checkbox" value="zalo" class="form-radio">Zalo</div>
-                    <div><input name="social" type="checkbox" value="yahoo" class="form-radio">Yahoo</div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" name="email" type="text" rules="required|email"
+                            placeholder="Nhập email đăng ký" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city" class="form-label">City</label>
+                        <select id="city" rules="required" name="city" class="form-control">
+                            <option value="">-- Chọn thành phố --</option>
+                            <option value="ha noi">Hà Nội</option>
+                            <option value="ho chi minh">Hồ Chí Minh</option>
+                            <option value="thanh hoa">Thanh Hóa</option>
+                            <option value="nghe an">Nghệ An</option>
+                            <option value="dong nai">Đồng Nai</option>
+                            <option value="binh duong">Bình Dương</option>
+                            <option value="hai phong">Hải Phòng</option>
+                            <option value="an giang">An Giang</option>
+                            <option value="hai duong">Hải Dương</option>
+                            <option value="hue">Huế</option>
+                        </select>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Gender</label>
+                        <div class="form-radio-control">
+                            <div>
+                                <input name="gender" type="radio" rules="checkone:gender" value="nam"
+                                    class="form-radio">Nam
+                            </div>
+                            <div>
+                                <input name="gender" type="radio" rules="checkone:gender" value="nu"
+                                    class="form-radio">Nữ
+                            </div>
+                            <div>
+                                <input name="gender" type="radio" rules="checkone:gender" value="khac"
+                                    class="form-radio">Khác
+                            </div>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address" class="form-label">Address</label>
+                        <input id="address" name="address" type="number" rules="required"
+                            placeholder="Nhập địa chỉ của bạn" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
                 </div>
-                <span class="form-message"></span>
             </div>
 
-            <button class="form-submit">Sign up</button>
-        </form>
-
-        <!-- log in -->
-        <form action="" method="POST" class="form" id="form-3">
-            <h3 class="heading">Sign in</h3>
-            <p class="desc">Form validate user input for securing webapp</p>
-
-            <div class="spacer"></div>
-
-            <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input id="email" name="email" type="text" placeholder="Nhập email đăng nhập" class="form-control">
-                <span class="form-message"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="password" class="form-label">Mật khẩu</label>
-                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
-                <span class="form-message"></span>
-            </div>
-
-            <button class="form-submit">Sign in</button>
+            <button class="form-submit" type="submit" name="register-submit">Sign up</button>
+            <p class="desc">Already have an account? <a href="./login.html">Sign in</a></p>
         </form>
 
     </div>
