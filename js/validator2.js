@@ -100,7 +100,7 @@ function Validator(formSelector) {
     }
     // handle submit event and return data
     formElement.onsubmit = (e) => {
-        e.preventDefault();
+//         e.preventDefault();
         var inputs = formElement.querySelectorAll('[name][rules]:not([disabled])');
         var isFormValid = true;
         // callback validate all input elements
