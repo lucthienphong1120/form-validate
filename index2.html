@@ -122,6 +122,13 @@
     <!-- script js -->
     <script src="./js/validator2.js"></script>
     <script>
+        document.querySelectorAll("button").addEventListener("click", function(event){
+          if (!confirm("Are you sure?")) {
+            event.preventDefault();
+            return;
+          }
+        }
+
         var form1 = new Validator('#form-1');
         form1.onSubmit = function (data) {
             alert(JSON.stringify(data));
