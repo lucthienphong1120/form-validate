@@ -122,6 +122,12 @@
     <!-- script js -->
     <script src="./js/validator.js"></script>
     <script>
+        document.querySelectorAll("button").addEventListener("click", function(event){
+          if (!confirm("Are you sure?")) {
+            event.preventDefault();
+            return;
+          }
+        }
         Validator({
             form: '#form-1',
             formGroupSelector: '.form-group',
